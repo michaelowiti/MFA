@@ -1,4 +1,25 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 export default function Contacts(){
+	const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+	
+		emailjs
+		  .sendForm('service_zu5lgfo', 'template_367vjep', form.current, {
+			publicKey: 'EDFjeZDvbTex7v_KD',
+		  })
+		  .then(
+			() => {
+			  console.log('SUCCESS!');
+			  e.target.reset();
+			},
+			(error) => {
+			  console.log('FAILED...', error.text);
+			},
+		  );
+	  };
     return(
         <section className="py-6 dark:bg-gray-800 dark:text-gray-50">
 <div className="container mx-auto lg:max-w-screen-md xl:max-w-screen-lg pt-12 pb-16 text-center  text-4xl font-bold "  >Contact us</div>
@@ -28,20 +49,20 @@ export default function Contacts(){
 				</p>
 			</div>
 		</div>
-		<form novalidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+		<form ref={form} onSubmit={sendEmail} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
 			<label className="block">
 				<span className="mb-1">Full name</span>
-				<input type="text" placeholder="enter your name" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800" />
+				<input type="text" name="from_name}" placeholder="enter your name" required className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800" />
 			</label>
 			<label className="block">
 				<span className="mb-1">Email address</span>
-				<input type="email" placeholder="enter email" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800" />
+				<input type="email" name="from_name" placeholder="enter email" required className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800" />
 			</label>
 			<label className="block">
 				<span className="mb-1">Message</span>
-				<textarea rows="3" className="block w-full rounded-md focus:ring focus:ri focus:ri dark:bg-gray-800"></textarea>
+				<textarea rows="3" name="message" required className="block w-full rounded-md focus:ring focus:ri focus:ri dark:bg-gray-800"></textarea>
 			</label>
-			<button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri dark:bg-violet-400 dark:text-gray-900 focus:ri hover:ri">Submit</button>
+			<button  onclick="()" type="submit" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri dark:bg-violet-400 dark:text-gray-900 focus:ri hover:ri">Submit</button>
 		</form>
 	</div>
 </section>
