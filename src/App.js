@@ -5,6 +5,7 @@ import Footer from './Footer';
 import Services from './Services';
 import Contacts from './Contacts';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import AboutUs from './AboutUs';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
