@@ -26,28 +26,59 @@
 //     )
 // }
 
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+
+// export default function Header() {
+//   return (
+//     <div className="bg-gray-800 dark:text-gray-100">
+//       <header className="container flex items-center justify-between h-16 px-4 mx-auto rounded dark:bg-gray-900">
+//         <Link to="/" className="block mb-2 text-2xl dark:text-violet-400">
+//           Media Forge Agency
+//         </Link>
+        
+//         <div className="items-center  space-x-8 lg:flex">
+//           <div className="space-x-4">
+//             <a><Link to="/">Home</Link></a>
+//             <a><Link to="/about">About us</Link></a>
+//             <a><Link to="/services">Services</Link></a>
+//             <a><Link to="/contacts">Contacts</Link></a>
+//           </div>
+//         </div>
+        
+       
+//       </header>
+//     </div>
+//   );
+// }
+
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+function Header() {
   return (
     <div className="bg-gray-800 dark:text-gray-100">
       <header className="container flex items-center justify-between h-16 px-4 mx-auto rounded dark:bg-gray-900">
-        <Link to="/" className="block mb-2 text-4xl dark:text-violet-400">
+        <Link to="/" className="block mb-2 text-l dark:text-violet-400">
           Media Forge Agency
         </Link>
         
-        <div className="items-center hidden space-x-8 lg:flex">
-          <div className="space-x-4">
-            <Link to="/">Home</Link>
-            <Link to="/about">About us</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/contacts">Contacts</Link>
+        <div className="items-center flex">
+          <div className="flex space-x-4">
+            <Link to="/" className="text-white">Home</Link>
+            <Link to="/about" className="text-white">About us</Link>
+            <Link to="/services" className="text-white">Services</Link>
+            <Link to="/contacts" className="text-white">Contacts</Link>
           </div>
         </div>
         
-       
       </header>
     </div>
   );
 }
+
+export default Header;
+
+
