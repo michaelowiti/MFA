@@ -10,8 +10,9 @@ import AboutUs from './AboutUs';
 
 function App() {
   return (
+    <div>
     <Router>
-      <div>
+      
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,8 +22,9 @@ function App() {
         </Routes>
         <Footer />
         <SpeedInsights />
-      </div>
+      
     </Router>
+    </div>
   );
 }
 

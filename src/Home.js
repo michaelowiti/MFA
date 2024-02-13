@@ -1,3 +1,4 @@
+
 import Contacts from './Contacts';
 import backgroundImg from './webdesign.jpg';
 import backImg from './seo.jpg';
@@ -26,7 +27,8 @@ export default function Home(){
                            
 						</p>
                         <div>
-                        <button className="px-4 py-2 rounded-md dark:bg-violet-400 dark:text-gray-900">
+							
+                        <button  className="px-4 py-2 rounded-md dark:bg-violet-400 dark:text-gray-900">
                             Get Started Now!
                         </button>
                         </div>
