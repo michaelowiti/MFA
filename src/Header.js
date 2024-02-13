@@ -59,7 +59,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <div className="bg-gray-800 dark:text-gray-100">
+    <div className="bg-gray-900 dark:text-gray-100">
       <header className="container flex items-center justify-between h-16 px-4 mx-auto rounded dark:bg-gray-900">
         <Link to="/" className="block mb-2 text-l dark:text-violet-400">
           Media Forge Agency
