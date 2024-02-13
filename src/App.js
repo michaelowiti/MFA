@@ -4,7 +4,7 @@ import Home from './Home';
 import Footer from './Footer';
 import Services from './Services';
 import Contacts from './Contacts';
-
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
         <Footer />
+        <SpeedInsights />
       </div>
     </Router>
   );
