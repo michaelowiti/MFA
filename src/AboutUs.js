@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutUs() {
   return (
-    <div className="min-h-screen dark:bg-gray-800 dark:text-gray-100">
+    <div className=" dark:bg-gray-800 dark:text-gray-100">
       				<section>
 					<div className="grid gap-6 lg:grid-cols-3">
 						<div className="overflow-hidden rounded lg:flex lg:col-span-3">
